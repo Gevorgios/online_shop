@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     'courses',
+    'users.apps.UsersConfig',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -129,6 +131,13 @@ STATICFILES_DIRS = [
 STATIC_ROOT = os.path.join(BASE_DIR, "/static/")
 MEDIA_URL = '/pictures/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "pictures")
+
+LOGIN_URL = 'user'
+LOGIN_REDIRECT_URL = 'home'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
