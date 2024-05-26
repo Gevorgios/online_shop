@@ -1,10 +1,8 @@
 from typing import Any
 from django.urls import reverse
-from users.models import Profile
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render
 from .models import Course, Lesson
 from django.views.generic import ListView, DetailView
-from django.contrib.auth.decorators import login_required
 from django.conf import settings
 from yookassa import Configuration, Payment
 
@@ -40,6 +38,12 @@ def tarrifsPage(request):
     
     payment_url = payment.confirmation.confirmation_url
     return render(request, 'courses/tarrifs.html', {'title': 'Тарифы на сайте', 'payment_url': payment_url})
+
+
+
+
+
+
 
 
 class CourseDetailPage(DetailView):
