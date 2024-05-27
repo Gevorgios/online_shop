@@ -44,7 +44,6 @@ def tarrifsPage(request):
 
 
 
-
 class CourseDetailPage(DetailView):
     model = Course
     template_name = 'courses/course-detail.html'
