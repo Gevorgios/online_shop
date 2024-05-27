@@ -35,7 +35,6 @@ def tarrifsPage(request):
         "description": "Подписка на сайт"
     })
     
-    
     payment_url = payment.confirmation.confirmation_url
     return render(request, 'courses/tarrifs.html', {'title': 'Тарифы на сайте', 'payment_url': payment_url})
 
